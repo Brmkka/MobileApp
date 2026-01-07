@@ -10,11 +10,21 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Вход в приложение"
+        android:text="Регистрация"
         android:textSize="28sp"
         android:textColor="#333333"
         android:textStyle="bold"
-        android:layout_marginBottom="40dp" />
+        android:layout_marginBottom="30dp" />
+
+    <EditText
+        android:id="@+id/nameInput"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Имя"
+        android:inputType="text"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_bg"
+        android:layout_marginBottom="12dp" />
 
     <EditText
         android:id="@+id/emailInput"
@@ -24,7 +34,7 @@
         android:inputType="textEmailAddress"
         android:padding="12dp"
         android:background="@drawable/edit_text_bg"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="12dp" />
 
     <EditText
         android:id="@+id/passwordInput"
@@ -34,25 +44,34 @@
         android:inputType="textPassword"
         android:padding="12dp"
         android:background="@drawable/edit_text_bg"
+        android:layout_marginBottom="12dp" />
+
+    <EditText
+        android:id="@+id/confirmPasswordInput"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Подтвердить пароль"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_bg"
         android:layout_marginBottom="24dp" />
 
     <Button
-        android:id="@+id/loginBtn"
+        android:id="@+id/registerBtn"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Войти"
+        android:text="Зарегистрироваться"
         android:textSize="16sp"
-        android:background="#2196F3"
+        android:background="#4CAF50"
         android:textColor="@android:color/white"
         android:layout_marginBottom="16dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Нет аккаунта? Зарегистрироваться"
+        android:text="Уже есть аккаунт? Войти"
         android:textSize="14sp"
         android:textColor="#2196F3"
-        android:id="@+id/registerLink"
-        android:layout_marginTop="16dp" />
+        android:id="@+id/loginLink" />
 
 </LinearLayout>

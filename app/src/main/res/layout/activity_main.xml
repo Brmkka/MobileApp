@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#f5f5f5">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Главное меню"
+        android:textSize="28sp"
+        android:textColor="#333333"
+        android:textStyle="bold"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/profileBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="👤 Мой профиль"
+        android:textSize="16sp"
+        android:background="#2196F3"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/listBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="📋 Список товаров"
+        android:textSize="16sp"
+        android:background="#FF9800"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/settingsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="⚙️ Настройки"
+        android:textSize="16sp"
+        android:background="#9C27B0"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/helpBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="❓ Справка"
+        android:textSize="16sp"
+        android:background="#4CAF50"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/logoutBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="🚪 Выход"
+        android:textSize="16sp"
+        android:background="#F44336"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>
