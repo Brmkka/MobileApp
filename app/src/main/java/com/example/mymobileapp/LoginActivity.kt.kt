@@ -8,7 +8,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-class `LoginActivity.kt` : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
     private lateinit var emailInput: EditText
     private lateinit var passwordInput: EditText
@@ -43,4 +43,9 @@ class `LoginActivity.kt` : AppCompatActivity() {
             }
         }
 
-        registerLink.setO
+        registerLink.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
+    }
+}
