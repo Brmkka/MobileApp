@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1095671569036",
+    "project_id": "shophub-8d09f",
+    "storage_bucket": "shophub-8d09f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1095671569036:android:849d58c4d731a14b1d39a9",
+        "android_client_info": {
+          "package_name": "Com.KittyTeam.Shop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBo5FJUhz8ZIxtlj6sRE4VK_NTIqqN0iX4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
