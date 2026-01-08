@@ -1,31 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">MyMobileApp</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Основное -->
+    <string name="app_name">ShopHub</string>
+    <string name="app_slogan">Ваш магазин всегда с собой</string>
 
-    <!-- Login Screen -->
-    <string name="login_title">Вход в приложение</string>
-    <string name="email_hint">Email</string>
-    <string name="password_hint">Пароль</string>
-    <string name="login_button">Войти</string>
-    <string name="register_link">Нет аккаунта? Зарегистрироваться</string>
+    <!-- Drawer -->
+    <string name="drawer_open">Открыть меню</string>
+    <string name="drawer_close">Закрыть меню</string>
 
-    <!-- Register Screen -->
-    <string name="register_title">Регистрация</string>
-    <string name="name_hint">Имя</string>
-    <string name="confirm_password_hint">Подтвердить пароль</string>
-    <string name="register_button">Зарегистрироваться</string>
-    <string name="login_link">Уже есть аккаунт? Войти</string>
+    <!-- Активности -->
+    <string name="login">Вход</string>
+    <string name="register">Регистрация</string>
+    <string name="profile">Профиль</string>
+    <string name="catalog">Каталог</string>
+    <string name="cart">Корзина</string>
+    <string name="settings">Настройки</string>
+    <string name="help">Справка</string>
 
-    <!-- Main Screen -->
-    <string name="main_title">Главное меню</string>
-    <string name="profile_button">Мой профиль</string>
-    <string name="list_button">Список товаров</string>
-    <string name="settings_button">Настройки</string>
-    <string name="help_button">Справка</string>
-    <string name="logout_button">Выход</string>
+    <!-- Кнопки -->
+    <string name="btn_save">Сохранить</string>
+    <string name="btn_cancel">Отмена</string>
+    <string name="btn_back">Назад</string>
+    <string name="btn_logout">Выход</string>
 
-    <!-- Settings Screen -->
-    <string name="settings_title">Настройки</string>
-    <string name="notifications_label">Пуш-уведомления</string>
+    <!-- Сообщения -->
+    <string name="msg_welcome">Добро пожаловать в ShopHub!</string>
+    <string name="msg_empty_cart">Корзина пуста</string>
+    <string name="msg_order_success">Заказ успешно оформлен!</string>
+    <string name="msg_profile_saved">Профиль сохранён</string>
+
+    <!-- Ошибки -->
+    <string name="error_fill_fields">Заполните все поля</string>
+    <string name="error_invalid_email">Неверный email</string>
+    <string name="error_password_mismatch">Пароли не совпадают</string>
 </resources>

@@ -3,35 +3,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:background="#f5f5f5">
+    android:background="#1a1a1a">
 
+    <!-- TOOLBAR -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary"
+        android:elevation="4dp" />
+
+    <!-- ЗАГОЛОВОК -->
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Список товаров"
-        android:textSize="28sp"
-        android:textColor="#333333"
+        android:text="📋 КАТАЛОГ ТОВАРОВ"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
         android:textStyle="bold"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="10dp" />
+        android:padding="16dp"
+        android:background="#2a2a2a"
+        android:textAlignment="center" />
 
+    <!-- СПИСОК ТОВАРОВ (КАРТОЧКИ) -->
     <ListView
         android:id="@+id/itemsListView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="#ffffff"
-        android:padding="8dp" />
+        android:background="#1a1a1a"
+        android:divider="#333333"
+        android:dividerHeight="1dp"
+        android:listSelector="#3a3a3a" />
 
+    <!-- КНОПКА НАЗАД -->
     <Button
         android:id="@+id/backBtn"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="Назад"
-        android:textSize="16sp"
-        android:background="#FF9800"
-        android:textColor="@android:color/white"
-        android:layout_marginTop="12dp" />
+        android:layout_height="56dp"
+        android:background="#2a2a2a"
+        android:text="← НАЗАД"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_margin="8dp" />
 
 </LinearLayout>

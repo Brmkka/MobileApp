@@ -1,39 +1,26 @@
 package com.example.mymobileapp
 
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Button
-import android.widget.Switch
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 
 class SettingsActivity : AppCompatActivity() {
 
-    private lateinit var notificationsSwitch: Switch
-    private lateinit var prefsText: TextView
+    private lateinit var themeBtn: Button
     private lateinit var backBtn: Button
-    private lateinit var sharedPref: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
-        notificationsSwitch = findViewById(R.id.notificationsSwitch)
-        prefsText = findViewById(R.id.prefsText)
+        themeBtn = findViewById(R.id.themeBtn)
         backBtn = findViewById(R.id.backBtn)
-        sharedPref = getSharedPreferences("AppSettings", MODE_PRIVATE)
 
-        // Загружаем сохраненное значение
-        val notificationsEnabled = sharedPref.getBoolean("notifications", true)
-        notificationsSwitch.isChecked = notificationsEnabled
-        updateNotificationStatus()
-
-        notificationsSwitch.setOnCheckedChangeListener { _, isChecked ->
-            sharedPref.edit().putBoolean("notifications", isChecked).apply()
-            updateNotificationStatus()
-            val message = if (isChecked) "Пуш-уведомления включены" else "Пуш-уведомления отключены"
-            Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+        themeBtn.setOnClickListener {
+            toggleTheme()
         }
 
         backBtn.setOnClickListener {
@@ -41,8 +28,17 @@ class SettingsActivity : AppCompatActivity() {
         }
     }
 
-    private fun updateNotificationStatus() {
-        val status = if (notificationsSwitch.isChecked) "Включены ✓" else "Отключены ✗"
-        prefsText.text = "Статус пуш-уведомлений: $status"
+    private fun toggleTheme() {
+        val currentMode = AppCompatDelegate.getDefaultNightMode()
+        val newMode = if (currentMode == AppCompatDelegate.MODE_NIGHT_YES) {
+            AppCompatDelegate.MODE_NIGHT_NO
+        } else {
+            AppCompatDelegate.MODE_NIGHT_YES
+        }
+        AppCompatDelegate.setDefaultNightMode(newMode)
+
+        val themeName = if (newMode == AppCompatDelegate.MODE_NIGHT_YES) "Тёмная" else "Светлая"
+        Toast.makeText(this, "✅ Тема изменена на $themeName", Toast.LENGTH_LONG).show()
+        recreate()
     }
 }

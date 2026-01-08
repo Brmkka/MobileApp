@@ -1,45 +1,59 @@
 package com.example.mymobileapp
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
-import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.drawerlayout.widget.DrawerLayout
+import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var drawerLayout: DrawerLayout
+    private lateinit var toolbar: Toolbar
+    private lateinit var navView: NavigationView
+    private lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val profileBtn = findViewById<Button>(R.id.profileBtn)
-        val listBtn = findViewById<Button>(R.id.listBtn)
-        val settingsBtn = findViewById<Button>(R.id.settingsBtn)
-        val helpBtn = findViewById<Button>(R.id.helpBtn)
-        val logoutBtn = findViewById<Button>(R.id.logoutBtn)
+        sharedPreferences = getSharedPreferences("ShopHub", MODE_PRIVATE)
 
-        profileBtn.setOnClickListener {
-            startActivity(Intent(this, ProfileActivity::class.java))
-        }
+        drawerLayout = findViewById(R.id.drawer_layout)
+        toolbar = findViewById(R.id.toolbar)
+        navView = findViewById(R.id.nav_view)
 
-        listBtn.setOnClickListener {
-            startActivity(Intent(this, ListActivity::class.java))
-        }
+        setSupportActionBar(toolbar)
 
-        settingsBtn.setOnClickListener {
-            startActivity(Intent(this, SettingsActivity::class.java))
-        }
+        val toggle = ActionBarDrawerToggle(
+            this, drawerLayout, toolbar,
+            R.string.drawer_open, R.string.drawer_close
+        )
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
 
-        helpBtn.setOnClickListener {
-            startActivity(Intent(this, HelpActivity::class.java))
-        }
-
-        logoutBtn.setOnClickListener {
-            Toast.makeText(this, "Вы вышли из аккаунта", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, LoginActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            startActivity(intent)
-            finish()
+        navView.setNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_home -> {
+                    Toast.makeText(this, "🏠 Главная", Toast.LENGTH_SHORT).show()
+                }
+                R.id.nav_catalog -> startActivity(Intent(this, ListActivity::class.java))
+                R.id.nav_cart -> startActivity(Intent(this, CartActivity::class.java))
+                R.id.nav_profile -> startActivity(Intent(this, ProfileActivity::class.java))
+                R.id.nav_settings -> startActivity(Intent(this, SettingsActivity::class.java))
+                R.id.nav_help -> startActivity(Intent(this, HelpActivity::class.java))
+                R.id.nav_logout -> {
+                    sharedPreferences.edit().putBoolean("isLoggedIn", false).apply()
+                    sharedPreferences.edit().putString("userName", "Гость").apply()
+                    Toast.makeText(this, "👋 Выход", Toast.LENGTH_SHORT).show()
+                }
+            }
+            drawerLayout.closeDrawers()
+            true
         }
     }
 }

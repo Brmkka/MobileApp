@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ЗАГОЛОВОК -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="✏️ РЕДАКТИРОВАТЬ ПРОФИЛЬ"
+            android:textColor="@color/accent_teal"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
+
+        <!-- ФОТО ПРОФИЛЯ -->
+        <ImageView
+            android:id="@+id/profileImageIV"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_box_bg"
+            android:scaleType="centerInside"
+            android:layout_marginBottom="12dp" />
+
+        <!-- КНОПКА ИЗМЕНИТЬ ФОТО -->
+        <Button
+            android:id="@+id/changePhotoBtn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/surface"
+            android:text="🖼️ ИЗМЕНИТЬ ФОТО"
+            android:textColor="@color/accent_teal"
+            android:textSize="14sp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- ИМЯ -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Имя:"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/nameInput"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/edit_text_bg"
+            android:hint="Ваше имя"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- EMAIL -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email:"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/emailInput"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/edit_text_bg"
+            android:hint="your@email.com"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:inputType="textEmailAddress" />
+
+        <!-- ТЕЛЕФОН -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Телефон:"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/phoneInput"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/edit_text_bg"
+            android:hint="+7 (999) 999-99-99"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp"
+            android:inputType="phone" />
+
+        <!-- КНОПКА СОХРАНИТЬ -->
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/accent_teal"
+            android:text="✅ СОХРАНИТЬ"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- КНОПКА ОТМЕНА -->
+        <Button
+            android:id="@+id/cancelBtn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/surface"
+            android:text="❌ ОТМЕНА"
+            android:textColor="@color/error"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</ScrollView>

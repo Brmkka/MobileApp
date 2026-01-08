@@ -6,20 +6,20 @@
     <!-- Разрешения -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
 
     <application
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.MyMobileApp"
-        tools:targetApi="31">
+        android:theme="@style/Theme.ShopHub"
+        android:usesCleartextTraffic="true">
 
-        <!-- LoginActivity.kt.kt - первый экран -->
+        <!-- ✅ Launcher -->
         <activity
-            android:name=".LoginActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,40 +27,19 @@
             </intent-filter>
         </activity>
 
-        <!-- RegisterActivity.kt -->
-        <activity
-            android:name=".RegisterActivity"
-            android:exported="true" />
+        <!-- Остальные экраны (exported=false достаточно) -->
+        <activity android:name=".RegisterActivity" android:exported="false" />
+        <activity android:name=".SettingsActivity" android:exported="false" />
+        <activity android:name=".ProfileActivity" android:exported="false" />
+        <activity android:name=".ListActivity" android:exported="false" />
+        <activity android:name=".DetailActivity" android:exported="false" />
+        <activity android:name=".HelpActivity" android:exported="false" />
+        <activity android:name=".CartActivity" android:exported="false" />
+        <activity android:name=".EditProfileActivity" android:exported="false" />
+        <activity android:name=".ProductDetailActivity" android:exported="false" />
 
-        <!-- MainActivity.kt -->
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" />
-
-        <!-- SettingsActivity.kt -->
-        <activity
-            android:name=".SettingsActivity"
-            android:exported="true" />
-
-        <!-- ProfileActivity.kt -->
-        <activity
-            android:name=".ProfileActivity"
-            android:exported="true" />
-
-        <!-- ListActivity.kt -->
-        <activity
-            android:name=".ListActivity"
-            android:exported="true" />
-
-        <!-- DetailActivity.kt -->
-        <activity
-            android:name=".DetailActivity"
-            android:exported="true" />
-
-        <!-- HelpActivity.kt -->
-        <activity
-            android:name=".HelpActivity"
-            android:exported="true" />
+        <!-- Если LoginActivity реально удалён, его тут НЕ должно быть -->
+        <!-- <activity android:name=".LoginActivity" android:exported="false" /> -->
 
     </application>
 

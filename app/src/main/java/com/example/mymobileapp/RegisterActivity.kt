@@ -1,10 +1,10 @@
 package com.example.mymobileapp
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
@@ -15,7 +15,8 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var passwordInput: EditText
     private lateinit var confirmPasswordInput: EditText
     private lateinit var registerBtn: Button
-    private lateinit var loginLink: TextView
+    private lateinit var backBtn: Button  // ✅ ЭТА КНОПКА!
+    private lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +27,8 @@ class RegisterActivity : AppCompatActivity() {
         passwordInput = findViewById(R.id.passwordInput)
         confirmPasswordInput = findViewById(R.id.confirmPasswordInput)
         registerBtn = findViewById(R.id.registerBtn)
-        loginLink = findViewById(R.id.loginLink)
+        backBtn = findViewById(R.id.backBtn)  // ✅ НАЙДЁТСЯ!
+        sharedPreferences = getSharedPreferences("ShopHub", MODE_PRIVATE)
 
         registerBtn.setOnClickListener {
             val name = nameInput.text.toString().trim()
@@ -38,6 +40,9 @@ class RegisterActivity : AppCompatActivity() {
                 name.isEmpty() || email.isEmpty() || password.isEmpty() -> {
                     Toast.makeText(this, "Заполните все поля", Toast.LENGTH_SHORT).show()
                 }
+                name.length < 2 -> {
+                    Toast.makeText(this, "Имя должно быть минимум 2 символа", Toast.LENGTH_SHORT).show()
+                }
                 email.length < 5 -> {
                     Toast.makeText(this, "Некорректный email", Toast.LENGTH_SHORT).show()
                 }
@@ -48,15 +53,20 @@ class RegisterActivity : AppCompatActivity() {
                     Toast.makeText(this, "Пароли не совпадают", Toast.LENGTH_SHORT).show()
                 }
                 else -> {
-                    Toast.makeText(this, "Регистрация успешна! Теперь войдите.", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this, LoginActivity::class.java)
+                    sharedPreferences.edit().putBoolean("isLoggedIn", true).apply()
+                    sharedPreferences.edit().putString("userName", name).apply()
+                    sharedPreferences.edit().putString("userEmail", email).apply()
+
+                    Toast.makeText(this, "✅ Регистрация успешна, $name!", Toast.LENGTH_LONG).show()
+
+                    val intent = Intent(this, ProfileActivity::class.java)
                     startActivity(intent)
                     finish()
                 }
             }
         }
 
-        loginLink.setOnClickListener {
+        backBtn.setOnClickListener {
             finish()
         }
     }

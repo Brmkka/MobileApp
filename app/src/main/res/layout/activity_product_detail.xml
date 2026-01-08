@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1a1a1a">
+
+    <!-- TOOLBAR -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary"
+        android:elevation="4dp" />
+
+    <!-- КАРТИНКА ТОВАРА (ЭМОДЗИ) -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:text="📦"
+        android:textSize="100sp"
+        android:gravity="center"
+        android:background="#2a2a2a"
+        android:layout_margin="16dp" />
+
+    <!-- НАЗВАНИЕ ТОВАРА -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Название товара"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:background="#2a2a2a"
+        android:layout_margin="8dp"
+        android:id="@+id/productNameTV" />
+
+    <!-- ЦЕНА -->
+    <TextView
+        android:id="@+id/productPriceTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="💰 0 ₽"
+        android:textColor="#20C997"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:background="#2a2a2a"
+        android:layout_margin="8dp"
+        android:textAlignment="center" />
+
+    <!-- ОПИСАНИЕ -->
+    <TextView
+        android:id="@+id/productDescTV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Описание товара"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:background="#2a2a2a"
+        android:layout_margin="8dp"
+        android:textAlignment="textStart" />
+
+    <!-- КНОПКА ДОБАВИТЬ В КОРЗИНУ -->
+    <Button
+        android:id="@+id/addToCartBtn"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#20C997"
+        android:text="🛒 ДОБАВИТЬ В КОРЗИНУ"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_margin="8dp" />
+
+    <!-- КНОПКА НАЗАД -->
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#2a2a2a"
+        android:text="← НАЗАД К КАТАЛОГУ"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_margin="8dp" />
+
+</LinearLayout>

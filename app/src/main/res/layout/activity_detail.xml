@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f5f5f5">
+    android:background="@color/background">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -10,87 +10,101 @@
         android:orientation="vertical"
         android:padding="16dp">
 
+        <!-- ЗАГОЛОВОК -->
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Описание товара"
-            android:textSize="28sp"
-            android:textColor="#333333"
-            android:textStyle="bold"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="10dp" />
-
-        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:background="#ffffff"
-            android:gravity="center"
-            android:layout_marginBottom="20dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="📦"
-                android:textSize="80sp" />
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/itemNameText"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Название товара"
-            android:textSize="22sp"
-            android:textColor="#333333"
+            android:text="📦 ДЕТАЛЬ ТОВАРА"
+            android:textColor="@color/accent_teal"
+            android:textSize="24sp"
             android:textStyle="bold"
-            android:layout_marginBottom="12dp" />
+            android:layout_marginBottom="24dp" />
 
+        <!-- ИМЯ ТОВАРА -->
         <TextView
-            android:id="@+id/itemDescText"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Описание"
-            android:textSize="14sp"
-            android:textColor="#666666"
-            android:layout_marginBottom="16dp" />
-
-        <TextView
-            android:id="@+id/priceText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Цена: 0 ₽"
-            android:textSize="20sp"
-            android:textColor="#FF5722"
-            android:textStyle="bold"
+            android:text="Название:"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
             android:layout_marginBottom="8dp" />
 
         <TextView
-            android:id="@+id/ratingText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="⭐ Рейтинг: 4.5/5"
-            android:textSize="14sp"
-            android:textColor="#F9A825"
-            android:layout_marginBottom="32dp" />
-
-        <Button
-            android:id="@+id/buyBtn"
+            android:id="@+id/productNameTV"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="🛒 Добавить в корзину"
+            android:layout_height="wrap_content"
+            android:text="📦 Загрузка..."
+            android:textColor="@color/text_primary"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:background="@drawable/rounded_box_bg"
+            android:layout_marginBottom="20dp" />
+
+        <!-- ЦЕНА -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Цена:"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/productPriceTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💰 0 ₽"
+            android:textColor="@color/accent_teal"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:background="@drawable/rounded_box_bg"
+            android:layout_marginBottom="20dp" />
+
+        <!-- ОПИСАНИЕ -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Описание:"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/productDescTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Загрузка..."
+            android:textColor="@color/text_primary"
             android:textSize="16sp"
-            android:background="#4CAF50"
-            android:textColor="@android:color/white"
+            android:padding="16dp"
+            android:background="@drawable/rounded_box_bg"
+            android:layout_marginBottom="32dp"
+            android:minHeight="100dp" />
+
+        <!-- КНОПКА ДОБАВИТЬ В КОРЗИНУ -->
+        <Button
+            android:id="@+id/addToCartBtn"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@color/accent_teal"
+            android:text="🛒 ДОБАВИТЬ В КОРЗИНУ"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold"
             android:layout_marginBottom="12dp" />
 
+        <!-- КНОПКА НАЗАД -->
         <Button
             android:id="@+id/backBtn"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="Назад"
-            android:textSize="16sp"
-            android:background="#FF9800"
-            android:textColor="@android:color/white" />
+            android:layout_height="56dp"
+            android:background="#2d2d2d"
+            android:text="← НАЗАД К КАТАЛОГУ"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 

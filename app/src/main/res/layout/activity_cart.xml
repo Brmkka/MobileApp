@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1a1a1a">
+
+    <!-- ЗАГОЛОВОК -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🛒 КОРЗИНА"
+        android:textColor="@color/accent_teal"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:padding="24dp"
+        android:textAlignment="center" />
+
+    <!-- СПИСОК ТОВАРОВ -->
+    <ListView
+        android:id="@+id/itemsListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp"
+        android:padding="16dp" />
+
+    <!-- ИТОГО -->
+    <TextView
+        android:id="@+id/totalPriceTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ИТОГО: 0 ₽"
+        android:textColor="#20C997"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:background="#2a2a2a"
+        android:textAlignment="center"
+        android:layout_margin="8dp" />
+
+    <!-- КНОПКИ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- КНОПКА ОЧИСТИТЬ -->
+        <Button
+            android:id="@+id/clearCartBtn"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#FF4444"
+            android:text="🗑️ ОЧИСТИТЬ КОРЗИНУ"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <!-- КНОПКА НАЗАД -->
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#2a2a2a"
+            android:text="← НАЗАД"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>
