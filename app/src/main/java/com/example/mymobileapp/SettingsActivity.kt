@@ -1,4 +1,4 @@
-package com.example.mymobileapp
+package Com.KittyTeam.Shop
 
 import android.os.Bundle
 import android.widget.Button

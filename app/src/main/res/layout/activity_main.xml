@@ -6,12 +6,11 @@
     android:layout_height="match_parent"
     android:background="@color/background">
 
-    <!-- ОСНОВНОЙ КОНТЕНТ -->
+    <!-- ОБЩИЙ КОНТЕЙНЕР (ЧТОБЫ TOOLBAR БЫЛ СВЕРХУ) -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/background">
+        android:orientation="vertical">
 
         <!-- TOOLBAR -->
         <androidx.appcompat.widget.Toolbar
@@ -21,8 +20,9 @@
             android:background="@color/primary"
             android:elevation="4dp" />
 
-        <!-- ГЛАВНЫЙ КОНТЕНТ (ПРИВЕТСТВИЕ) -->
+        <!-- КОНТЕЙНЕР ДЛЯ КОНТЕНТА + КНОПКИ -->
         <LinearLayout
+            android:id="@+id/content_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
@@ -64,17 +64,20 @@
                 android:textSize="16sp"
                 android:textAlignment="center" />
 
+            <!-- СЮДА ДОБАВИТСЯ КНОПКА PUSH АВТОМАТИЧЕСКИ -->
+
         </LinearLayout>
     </LinearLayout>
 
-    <!-- NAVIGATION DRAWER (БЕЗ headerLayout!) -->
+    <!-- NAVIGATION DRAWER -->
+    <!-- NAVIGATION DRAWER (ИСПРАВЛЕН!) -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
-        android:theme="@style/DrawerTheme"
         android:layout_width="280dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@color/surface"
+        app:headerLayout="@layout/nav_header_drawer"
         app:menu="@menu/nav_drawer_menu" />
+
 
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -6,22 +6,20 @@
     android:padding="16dp"
     android:background="@color/background">
 
-    <!-- ЗАГОЛОВОК -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="⚙️ НАСТРОЙКИ"
+        android:text="НАСТРОЙКИ"
         android:textColor="@color/accent_teal"
         android:textSize="28sp"
         android:textStyle="bold"
         android:layout_marginBottom="32dp"
         android:textAlignment="center" />
 
-    <!-- ПЕРЕКЛЮЧЕНИЕ ТЕМЫ -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="🌙 Тема приложения:"
+        android:text="Тема приложения:"
         android:textColor="@color/text_primary"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -32,19 +30,18 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:background="@color/accent_teal"
-        android:text="🌙 ПЕРЕКЛЮЧИТЬ ТЕМУ"
+        android:text="ПЕРЕКЛЮЧИТЬ ТЕМУ"
         android:textColor="@color/text_primary"
         android:textSize="16sp"
         android:textStyle="bold"
         android:layout_marginBottom="32dp" />
 
-    <!-- КНОПКА НАЗАД -->
     <Button
         android:id="@+id/backBtn"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:background="@color/surface"
-        android:text="← НАЗАД"
+        android:text="НАЗАД"
         android:textColor="@color/text_primary"
         android:textSize="18sp"
         android:textStyle="bold"

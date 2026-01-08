@@ -1,14 +1,15 @@
 plugins {
-    id("com.android.application")
-    kotlin("android")
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    id("com.google.gms.google-services")
 }
 
 android {
-    namespace = "com.example.mymobileapp"
+    namespace = "Com.KittyTeam.Shop"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.mymobileapp"
+        applicationId = "Com.KittyTeam.Shop"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
@@ -38,6 +39,14 @@ android {
 }
 
 dependencies {
+    implementation("com.google.firebase:firebase-messaging:23.4.1")
+// FCM для уведомлений
+    implementation("com.google.firebase:firebase-core:21.1.1")
+// HTTP запросы для регистрации
+    implementation("com.squareup.okhttp3:okhttp:4.11.0")
+// JSON парсинг
+    implementation("com.google.code.gson:gson:2.10.1")
+
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation("androidx.drawerlayout:drawerlayout:1.2.0")
     implementation("com.google.android.material:material:1.11.0")
@@ -62,4 +71,10 @@ dependencies {
     // Testing (опционально)
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    implementation("com.google.firebase:firebase-messaging:23.4.1")
+    implementation("com.google.firebase:firebase-core:21.1.1")
+
+    // HTTP для регистрации
+    implementation("com.squareup.okhttp3:okhttp:4.11.0")
+    implementation("com.google.code.gson:gson:2.10.1")
 }

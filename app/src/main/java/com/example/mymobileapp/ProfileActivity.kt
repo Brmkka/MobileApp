@@ -1,10 +1,11 @@
-package com.example.mymobileapp
+package Com.KittyTeam.Shop
 
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class ProfileActivity : AppCompatActivity() {
@@ -36,7 +37,6 @@ class ProfileActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // ✅ КНОПКА РЕГИСТРАЦИИ (ДОЛЖНА РАБОТАТЬ!)
         registerBtn.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
@@ -60,5 +60,7 @@ class ProfileActivity : AppCompatActivity() {
         userNameTV.text = "👤 $name"
         userEmailTV.text = "📧 $email"
         userPhoneTV.text = "☎️ $phone"
+
+        Toast.makeText(this, "✅ Профиль обновлён: $name", Toast.LENGTH_SHORT).show()
     }
 }

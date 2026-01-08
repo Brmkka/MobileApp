@@ -1,4 +1,4 @@
-package com.example.mymobileapp
+package Com.KittyTeam.Shop
 
 import android.content.Intent
 import android.content.SharedPreferences

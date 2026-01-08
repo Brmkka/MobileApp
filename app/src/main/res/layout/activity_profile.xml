@@ -1,126 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1a1a1a">
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/background">
 
-    <LinearLayout
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:text="МОЙ ПРОФИЛЬ"
+        android:textColor="@color/accent_teal"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp"
+        android:textAlignment="center" />
 
-        <!-- ЗАГОЛОВОК -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="👤 ПРОФИЛЬ"
-            android:textColor="#20C997"
-            android:textSize="32sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="32dp"
-            android:textAlignment="center" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Имя:"
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp"
+        android:layout_marginBottom="4dp" />
 
-        <!-- ИМЯ ПОЛЬЗОВАТЕЛЯ -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="👤 Имя:"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp" />
+    <TextView
+        android:id="@+id/userNameTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Гость"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp" />
 
-        <TextView
-            android:id="@+id/userNameTV"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Гость"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:layout_marginBottom="20dp"
-            android:padding="12dp"
-            android:background="#2a2a2a"
-            android:textAlignment="textStart" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email:"
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp"
+        android:layout_marginBottom="4dp" />
 
-        <!-- EMAIL -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="📧 Email:"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp" />
+    <TextView
+        android:id="@+id/userEmailTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="не указан"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp" />
 
-        <TextView
-            android:id="@+id/userEmailTV"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="не указан"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:layout_marginBottom="20dp"
-            android:padding="12dp"
-            android:background="#2a2a2a"
-            android:textAlignment="textStart" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Телефон:"
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp"
+        android:layout_marginBottom="4dp" />
 
-        <!-- ТЕЛЕФОН -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="☎️ Телефон:"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp" />
+    <TextView
+        android:id="@+id/userPhoneTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="не указан"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        android:layout_marginBottom="32dp" />
 
-        <TextView
-            android:id="@+id/userPhoneTV"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="+7 (999) 999-99-99"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:layout_marginBottom="32dp"
-            android:padding="12dp"
-            android:background="#2a2a2a"
-            android:textAlignment="textStart" />
+    <Button
+        android:id="@+id/editBtn"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/accent_teal"
+        android:text="РЕДАКТИРОВАТЬ"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp" />
 
-        <!-- КНОПКА РЕДАКТИРОВАНИЯ -->
-        <Button
-            android:id="@+id/editBtn"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:background="@color/accent_teal"
-            android:text="✏️ РЕДАКТИРОВАТЬ"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="12dp" />
+    <Button
+        android:id="@+id/registerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/success"
+        android:text="ЗАРЕГИСТРИРОВАТЬСЯ"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp" />
 
-        <!-- КНОПКА РЕГИСТРАЦИИ -->
-        <Button
-            android:id="@+id/registerBtn"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:background="#27ae60"
-            android:text="📝 ЗАРЕГИСТРИРОВАТЬСЯ"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="12dp" />
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/surface"
+        android:text="НАЗАД"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp" />
 
-        <!-- КНОПКА НАЗАД -->
-        <Button
-            android:id="@+id/backBtn"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:background="#2a2a2a"
-            android:text="← НАЗАД"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-</ScrollView>
+</LinearLayout>

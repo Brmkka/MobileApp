@@ -7,46 +7,45 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@android:drawable/ic_menu_view"
-            android:title="🏠 Главная" />
+            android:title="Главная" />
 
         <item
             android:id="@+id/nav_catalog"
             android:icon="@android:drawable/ic_menu_agenda"
-            android:title="📋 Каталог" />
+            android:title="Каталог" />
 
         <item
             android:id="@+id/nav_cart"
             android:icon="@android:drawable/ic_menu_upload"
-            android:title="🛒 Корзина" />
+            android:title="Корзина" />
 
         <item
             android:id="@+id/nav_profile"
             android:icon="@android:drawable/ic_menu_my_calendar"
-            android:title="👤 Профиль" />
+            android:title="Профиль" />
     </group>
 
     <item android:title="Другое">
         <menu>
-            <!-- ✅ ВОТ ОН - ID КОТОРЫЙ ТЕРЯЛСЯ -->
             <item
                 android:id="@+id/nav_theme"
                 android:icon="@android:drawable/ic_menu_day"
-                android:title="🌙 Переключить тему" />
+                android:title="Переключить тему" />
 
             <item
                 android:id="@+id/nav_settings"
                 android:icon="@android:drawable/ic_menu_preferences"
-                android:title="⚙️ Настройки" />
+                android:title="Настройки" />
 
             <item
                 android:id="@+id/nav_help"
                 android:icon="@android:drawable/ic_menu_help"
-                android:title="ℹ️ Справка" />
+                android:title="Справка" />
 
             <item
                 android:id="@+id/nav_logout"
                 android:icon="@android:drawable/ic_menu_close_clear_cancel"
-                android:title="🚪 Выход" />
+                android:title="Выход" />
         </menu>
     </item>
 
