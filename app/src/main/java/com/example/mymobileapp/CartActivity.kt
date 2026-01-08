@@ -10,6 +10,7 @@ import android.widget.ListView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat // ✅ ВАЖНЫЙ ИМПОРТ
 
 class CartActivity : AppCompatActivity() {
 
@@ -91,13 +92,16 @@ class CustomCartAdapter(
 
         textView1.text = name
         textView1.textSize = 18f
-        textView1.setTextColor(0xFFFFFFFF.toInt()) // ✅ БЕЛЫЙ ЦВЕТ!
+
+        // ✅ ИСПРАВЛЕНИЕ: БЕРЁМ ЦВЕТ ИЗ РЕСУРСОВ (ЧЕРНЫЙ ИЛИ БЕЛЫЙ)
+        textView1.setTextColor(ContextCompat.getColor(context, R.color.text_primary))
 
         textView2.text = "💰 $price ₽"
         textView2.textSize = 16f
-        textView2.setTextColor(0xFF20C997.toInt()) // ✅ ЗЕЛЁНЫЙ
+        textView2.setTextColor(ContextCompat.getColor(context, R.color.accent_teal))
 
-        view.setBackgroundColor(0xFF2A2A2A.toInt()) // ✅ ТЁМНЫЙ ФОН
+        // ✅ ФОН ТОЖЕ БЕРЁМ ИЗ ТЕМЫ
+        view.setBackgroundColor(ContextCompat.getColor(context, R.color.card_background))
         view.setPadding(24, 16, 24, 16)
 
         return view

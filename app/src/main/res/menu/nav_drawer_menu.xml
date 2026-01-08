@@ -1,46 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDimen">
 
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:title="🏠 Главная"
-            app:titleTextColor="#FFFFFF" />
+            android:icon="@android:drawable/ic_menu_view"
+            android:title="🏠 Главная" />
 
         <item
             android:id="@+id/nav_catalog"
-            android:title="📋 Каталог"
-            app:titleTextColor="#FFFFFF" />
+            android:icon="@android:drawable/ic_menu_agenda"
+            android:title="📋 Каталог" />
 
         <item
             android:id="@+id/nav_cart"
-            android:title="🛒 Корзина"
-            app:titleTextColor="#FFFFFF" />
+            android:icon="@android:drawable/ic_menu_upload"
+            android:title="🛒 Корзина" />
 
         <item
             android:id="@+id/nav_profile"
-            android:title="👤 Профиль"
-            app:titleTextColor="#FFFFFF" />
+            android:icon="@android:drawable/ic_menu_my_calendar"
+            android:title="👤 Профиль" />
     </group>
 
     <item android:title="Другое">
         <menu>
+            <!-- ✅ ВОТ ОН - ID КОТОРЫЙ ТЕРЯЛСЯ -->
+            <item
+                android:id="@+id/nav_theme"
+                android:icon="@android:drawable/ic_menu_day"
+                android:title="🌙 Переключить тему" />
 
             <item
                 android:id="@+id/nav_settings"
-                android:title="⚙️ Настройки"
-                app:titleTextColor="#FFFFFF" />
+                android:icon="@android:drawable/ic_menu_preferences"
+                android:title="⚙️ Настройки" />
 
             <item
                 android:id="@+id/nav_help"
-                android:title="ℹ️ Справка"
-                app:titleTextColor="#FFFFFF" />
+                android:icon="@android:drawable/ic_menu_help"
+                android:title="ℹ️ Справка" />
 
             <item
                 android:id="@+id/nav_logout"
-                android:title="🚪 Выход"
-                app:titleTextColor="#FFFFFF" />
+                android:icon="@android:drawable/ic_menu_close_clear_cancel"
+                android:title="🚪 Выход" />
         </menu>
     </item>
 

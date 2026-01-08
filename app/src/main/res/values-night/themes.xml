@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- ОСНОВНАЯ ТЕМА БЕЗ ACTIONBAR -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- ТЁМНАЯ ОСНОВНАЯ ТЕМА -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primary</item>
         <item name="colorAccent">@color/accent_teal</item>
         <item name="android:windowBackground">@color/background</item>
     </style>
 
-    <!-- СТИЛИ ДЛЯ BURGER МЕНЮ (СВЕТЛАЯ ТЕМА) -->
+    <!-- СТИЛИ ДЛЯ BURGER МЕНЮ (ТЁМНАЯ ТЕМА) -->
     <style name="DrawerTheme" parent="AppTheme">
         <item name="android:textColorPrimary">@color/text_primary</item>
         <item name="android:textColorSecondary">@color/text_secondary</item>
